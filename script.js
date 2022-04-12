@@ -4,9 +4,10 @@ document.onmousemove = (event) => {
     box.style.top  = event.clientY - (box.clientHeight/2)+ 'px';
 }
 
-function changeColor(){
-    box.style.backgroundColor = 'salmon';
+function random(number) {
+    return Math.floor(Math.random()* number)
 }
-
-const div = document.querySelector('#box');
-div.onclick = changeColor
+document.onclick  = function () { 
+cakacak = "rgb("+ random(255)+","+ random(255)+","+ random(255)+")";
+box.style.background = cakacak
+}
